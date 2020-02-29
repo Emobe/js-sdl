@@ -1,0 +1,52 @@
+{
+  "name": "ts-node-boilerplate",
+  "version": "1.0.0",
+  "description": "Typescript boilerplate using ts-node and tape for testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "debug": "node -r ts-node/register src/index.ts --inspect-brk=9229",
+    "dev": "nodemon",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "ts-node node_modules/tape/bin/tape tests/**/*.test.ts",
+    "test:watch": "ts-node node_modules/tape-watch/bin/tape-watch tests/**/*.test.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emobe/ts-boilerplate.git"
+  },
+  "keywords": [
+    "typescript",
+    "tape",
+    "boilerplate",
+    "testing"
+  ],
+  "author": "Anthony Shuker <anthony@emobe.uk>",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/emobe/ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/emobe/ts-boilerplate#readme",
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "@types/tape": "^4.2.34",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "sinon": "^9.0.0",
+    "tape": "^4.13.0",
+    "tape-watch": "^2.3.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "tsconfig-paths": "^3.9.0"
+  }
+}
