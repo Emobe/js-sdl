@@ -1,0 +1,1 @@
+cmd_Release/obj.target/hello.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=hello.node -o Release/obj.target/hello.node -Wl,--start-group Release/obj.target/hello/src/node_sdl.o Release/obj.target/hello/src/window.o -Wl,--end-group /usr/lib/libSDL2-2.0.so

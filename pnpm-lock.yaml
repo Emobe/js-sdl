@@ -1,4 +1,6 @@
 dependencies:
+  bindings: registry.npmjs.org/bindings/1.5.0
+  node-addon-api: registry.npmjs.org/node-addon-api/2.0.0
   tsconfig-paths: registry.npmjs.org/tsconfig-paths/3.9.0
 devDependencies:
   '@types/node': registry.npmjs.org/@types/node/13.7.7
@@ -631,9 +633,7 @@ packages:
   registry.npmjs.org/bindings/1.5.0:
     dependencies:
       file-uri-to-path: registry.npmjs.org/file-uri-to-path/1.0.0
-    dev: true
     name: bindings
-    optional: true
     resolution:
       integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
       registry: 'https://registry.npmjs.com/'
@@ -1932,9 +1932,7 @@ packages:
       tarball: 'https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-5.0.1.tgz'
     version: 5.0.1
   registry.npmjs.org/file-uri-to-path/1.0.0:
-    dev: true
     name: file-uri-to-path
-    optional: true
     resolution:
       integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
       registry: 'https://registry.npmjs.com/'
@@ -3842,6 +3840,14 @@ packages:
       registry: 'https://registry.npmjs.com/'
       tarball: 'https://registry.npmjs.org/nise/-/nise-4.0.3.tgz'
     version: 4.0.3
+  registry.npmjs.org/node-addon-api/2.0.0:
+    dev: false
+    name: node-addon-api
+    resolution:
+      integrity: sha512-ASCL5U13as7HhOExbT6OlWJJUV/lLzL2voOSP1UVehpRD8FbSrSDjfScK/KwAvVTI5AS6r4VwbOMlIqtvRidnA==
+      registry: 'https://registry.npmjs.com/'
+      tarball: 'https://registry.npmjs.org/node-addon-api/-/node-addon-api-2.0.0.tgz'
+    version: 2.0.0
   registry.npmjs.org/nodemon/2.0.2:
     dependencies:
       chokidar: registry.npmjs.org/chokidar/3.3.1
@@ -6188,11 +6194,13 @@ specifiers:
   '@types/tape': ^4.2.34
   '@typescript-eslint/eslint-plugin': ^2.21.0
   '@typescript-eslint/parser': ^2.21.0
+  bindings: ^1.5.0
   eslint: ^6.8.0
   eslint-config-prettier: ^6.10.0
   eslint-plugin-prettier: ^3.1.2
   husky: ^4.2.3
   lint-staged: ^10.0.8
+  node-addon-api: ^2.0.0
   nodemon: ^2.0.2
   prettier: ^1.19.1
   sinon: ^9.0.0
