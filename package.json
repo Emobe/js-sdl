@@ -6,11 +6,11 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "debug": "node -r ts-node/register src/index.ts --inspect-brk=9229",
-    "dev": "nodemon",
+    "dev": "node index.js",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "ts-node node_modules/tape/bin/tape tests/**/*.test.ts",
     "test:watch": "ts-node node_modules/tape-watch/bin/tape-watch tests/**/*.test.ts",
-    "build": "tsc"
+    "build": "node-gyp configure && node-gyp build"
   },
   "repository": {
     "type": "git",

@@ -308,8 +308,8 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /usr/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/emobe/.cache/node-gyp/12.16.1" "-Dnode_gyp_dir=/usr/lib/node_modules/node-gyp" "-Dnode_lib_file=/home/emobe/.cache/node-gyp/12.16.1/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/emobe/projects/ts-xorg" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/emobe/projects/ts-xorg/build/config.gypi -I/usr/lib/node_modules/node-gyp/addon.gypi -I/home/emobe/.cache/node-gyp/12.16.1/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/build/config.gypi $(srcdir)/binding.gyp $(srcdir)/../../.cache/node-gyp/12.16.1/include/node/common.gypi $(srcdir)/../../../../usr/lib/node_modules/node-gyp/addon.gypi
+cmd_regen_makefile = cd $(srcdir); /home/emobe/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/emobe/.cache/node-gyp/12.16.1" "-Dnode_gyp_dir=/home/emobe/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp" "-Dnode_lib_file=/home/emobe/.cache/node-gyp/12.16.1/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/emobe/projects/ts-xorg" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/emobe/projects/ts-xorg/build/config.gypi -I/home/emobe/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/addon.gypi -I/home/emobe/.cache/node-gyp/12.16.1/include/node/common.gypi "--toplevel-dir=." binding.gyp
+Makefile: $(srcdir)/../../.cache/node-gyp/12.16.1/include/node/common.gypi $(srcdir)/build/config.gypi $(srcdir)/../../.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/node-gyp/addon.gypi $(srcdir)/binding.gyp
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included

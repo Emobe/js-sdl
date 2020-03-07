@@ -1,11 +1,12 @@
 #include <napi.h>
 #include <SDL2/SDL.h>
 
-class SDLWindow : public Napi::ObjectWrap<SDLWindow> {
+namespace sdl {
+class WindowWrap : public Napi::ObjectWrap<WindowWrap> {
   public:
     static Napi::Object Init(Napi::Env env, Napi::Object exports);
-    SDLWindow(const Napi::CallbackInfo &Info);
-    ~SDLWindow();
+    WindowWrap(const Napi::CallbackInfo &info);
+    ~WindowWrap();
   private:
     static Napi::FunctionReference constructor;
     double _value;
@@ -27,5 +28,5 @@ class SDLWindow : public Napi::ObjectWrap<SDLWindow> {
     Napi::Value GetTitle(const Napi::CallbackInfo &info);
 
     SDL_Window* window_;
-
 };
+}
